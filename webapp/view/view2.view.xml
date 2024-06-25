@@ -1,0 +1,54 @@
+<mvc:View controllerName="sap.kt.curre.currency.controller.view2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onPressView2"  >
+        <content >
+            	<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Address"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+					<Button icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+                <Label text="Exp ID"></Label>
+                <Input value=""></Input>
+
+                <Label text="Exp Name"></Label>
+                <Input value=""></Input>
+
+                <Label text="Amount INR"></Label>
+                <Input value=""></Input>
+
+                <Label text="IAmount USD"></Label>
+                <Input value=""></Input>
+
+                <Label text="Amount EUR"></Label>
+                <Input value=""></Input>
+
+                <Label text="Status"></Label>
+                <Input value=""></Input>
+			</f:content>
+		</f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

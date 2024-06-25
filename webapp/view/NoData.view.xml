@@ -1,0 +1,10 @@
+<mvc:View controllerName="sap.kt.curre.currency.controller.NoData"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="navButtonPress"  >
+
+	<content>
+        <Text text="No Data Page"></Text>
+    </content>
+    </Page>
+</mvc:View>

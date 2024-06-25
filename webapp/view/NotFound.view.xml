@@ -1,0 +1,10 @@
+<mvc:View controllerName="sap.kt.curre.currency.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showNavButton="true"   >
+
+	<content>
+		<IllustratedMessage title="Not Found" description="Page Not Found"></IllustratedMessage>
+	</content>
+    </Page>
+</mvc:View>

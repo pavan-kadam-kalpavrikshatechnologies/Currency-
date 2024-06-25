@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.kt.curre.currency.controller.currency"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" >
+        <content >
+        <Button text="Click Me" press="onPressEvent" ></Button>
+        <Button text="Go To View 2" press="onPresNavigation" ></Button>
+        <Text text=""/>
+        <Input id="inputId"/>
+        <Button text="Save" press="changePress" ></Button>
+            <Table items="{path:'currency>/'}" mode="Delete" delete="onDelete" id="TableId" >
+                <columns>
+                    <Column >
+                        <Text text="Exp Id"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="Exp Name"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="Amount (INR)"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="Amount (USD)"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="Amount (EUR)"></Text>
+                    </Column>
+                    <Column >
+                        <Text text="Status"></Text>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem press="onPresNavigation" type="Navigation" >
+                        <cells>
+                            <Text text="{currency>expId}"></Text>
+                            <Text text="{currency>expName}"></Text>
+                            <Input id="input" change="onChnage" value="{ path: 'currency>amountINR', formatter: '.formatter.formatCurrencyText'}" />
+
+                            <Input  value="{ path: 'currency>amountINR', formatter: '.formatter.formatCurrencyInUSDText'}" editable="false" />
+
+                            <Input  value="{ path: 'currency>amountINR', formatter: '.formatter.formatCurrencyInEuroText'}" editable="false" />
+                            
+                            <ObjectStatus
+                                text="{currency>status}"
+                                state="{ path: 'currency>status', formatter: '.formatter.formatCurrencyInStatus'}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

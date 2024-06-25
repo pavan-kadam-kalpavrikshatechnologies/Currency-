@@ -1,0 +1,148 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "sap.kt.curre.currency",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.13.2",
+      "toolsId": "42df54fd-4f14-4916-b862-8d768539d14c"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.kt.curre.currency.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "sap.kt.curre.currency.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "bypassed": {
+          "target": "notFound"
+        },
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "Routecurrency",
+          "pattern": ":?query:",
+          "target": [
+            "Targetcurrency"
+          ]
+        },
+        {
+          "name": "Routeview2",
+          "pattern": "view2",
+          "target": [
+            "view2target"
+          ]
+        },
+        {
+          "name": "Routeview3",
+          "pattern": "view3",
+          "target": [
+            "NoData"
+          ]
+        },
+        {
+          "name": "Routeview4",
+          "pattern": "view4",
+          "target": [
+            "notFound"
+          ]
+        }
+      ],
+      "targets": {
+        "Targetcurrency": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "currency",
+          "viewName": "currency"
+        },
+        "view2target": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "view2",
+          "viewName": "view2"
+        },
+        "NoData": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "view3",
+          "viewName": "NoData"
+        },
+        "notFound": {
+          "viewId": "notFound",
+          "viewName": "NotFound",
+          "transition": "show"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.kt.curre.currency.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
